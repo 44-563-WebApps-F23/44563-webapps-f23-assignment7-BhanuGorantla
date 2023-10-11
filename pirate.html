@@ -232,30 +232,21 @@
             const lrow = Math.floor(lastCheck / 5);
 
             const lcol = lastCheck % 5;
-
-
             if (
 
                 Math.abs(tresRow - lrow) + Math.abs(tresCol - lcol) == 1
 
             ) {
-
                 document.getElementById("help_id").innerText = "Can smell it";
-
                 document.getElementById("help_id").style.color = "red";
-
             }
-
             else if (
-
                 Math.abs(tresRow - lrow) + Math.abs(tresCol - lcol) == 2
-
             ) {
 
                 document.getElementById("help_id").innerText = "Close Matie";
 
                 document.getElementById("help_id").style.color = "orange";
-
             } else {
 
                 document.getElementById("help_id").innerText = "Step Faster";
@@ -265,15 +256,11 @@
             }
 
             penalty += 2;
-
             document.getElementById("penalty").innerText = `Penalty: ${penalty}`;
-
-            
         }
 
 
     </script>
-
 </body>
 
 </html>
