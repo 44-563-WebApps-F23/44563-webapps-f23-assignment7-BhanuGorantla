@@ -1,64 +1,35 @@
 <!DOCTYPE html>
-
 <html>
-
-
-
 <head>
-
 	<title>Merge</title>
-
 	<style>
 		.flex-container {
 
 			display: flex;
-
 			flex-direction: row;
-
 			background-color: red;
 
 		}
 
-
-
 		.flex-container>div {
 
-			/*div children of the flex container*/
-
 			background-color: #f1f1f1;
-
 			margin: 10px;
-
 			padding: 20px;
-
 			font-size: 30px;
 
 		}
 
-
-
-		/* Responsive layout */
-
 		@media (max-width: 600px) {
-
 			.flex-container {
-
 				flex-direction: column;
-
 				background-color: green;
-
 			}
 
 		}
 	</style>
 
 </head>
-
-
-
-
-
-
 
 <body>
 
@@ -67,33 +38,20 @@
 	<div class="flex-container" id="target">
 
 		<div>row item 1</div>
-
 		<div>row item 2</div>
-
 		<div>row item 3</div>
 
 	</div>
-
-
-
-	<p> Press the button to create an new element of type div and then add it to the container.
-
-	</p>
-
+	<p> Press the button to create an new element of type div and then add it to the container.</p>
 	<input type="text" id="it">
-
 	<button onclick="makeNewDiv()">Add end</button>
-
-
 
 </body>
 
 <script>
 
-
 	function makeNewDiv() {
 		const shot = document.getElementById("target");
-
 		const ele = shot.getElementsByTagName("div");
 
 		for (let i = 0; i < ele.length; i++) {
@@ -102,27 +60,13 @@
 
 		}
 
-
-
 		let element = document.createElement("div")
-
 		element.className = "merger"
-
 		const value = document.getElementById("it").value;
-
 		element.innerHTML = value
-
-
-
 		let container = document.getElementById('target')
-
 		container.appendChild(element)
-
-
-
 	}
-
-
 
 </script>
 
