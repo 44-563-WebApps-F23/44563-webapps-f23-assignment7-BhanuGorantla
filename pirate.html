@@ -77,7 +77,7 @@
         <p>Penalty is zero.</p>
     </div>
 
-    <div style="text-align: center;">
+    <div style="text-align: center;" id="help_id" > 
         <p>Click for help.</p>
     </div>
 
@@ -88,94 +88,191 @@
     <div class="grid-container">
         <!-- rowww - 1 -->
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location">
+            <img src="treasure (1).png" alt="Starting Location" id="img0" onclick="check(0)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location2">
+            <img src="treasure (1).png" alt="Starting Location2" id="img1" onclick="check(1)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location3">
+            <img src="treasure (1).png" alt="Starting Location3" id="img2" onclick="check(2)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location4">
+            <img src="treasure (1).png" alt="Starting Location4" id="img3" onclick="check(3)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location5">
+            <img src="treasure (1).png" alt="Starting Location5" id="img4" onclick="check(4)">
         </div>
     </div>
 
     <div class="grid-container">
         <!-- rowww - 2 -->
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location">
+            <img src="treasure (1).png" alt="Starting Location" id="img5" onclick="check(5)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location2">
+            <img src="treasure (1).png" alt="Starting Location2" id="img6" onclick="check(6)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location3">
+            <img src="treasure (1).png" alt="Starting Location3" id="img7" onclick="check(7)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location4">
+            <img src="treasure (1).png" alt="Starting Location4" id="img8" onclick="check(8)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location5">
+            <img src="treasure (1).png" alt="Starting Location5" id="img9" onclick="check(9)">
         </div>
     </div>
     <div class="grid-container">
         <!-- rowww - 3 -->
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location">
+            <img src="treasure (1).png" alt="Starting Location" id="img10" onclick="check(10)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location2">
+            <img src="treasure (1).png" alt="Starting Location2" id="img11" onclick="check(11)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location3">
+            <img src="treasure (1).png" alt="Starting Location3" id="img12" onclick="check(12)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location4">
+            <img src="treasure (1).png" alt="Starting Location4" id="img13" onclick="check(13)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location5">
+            <img src="treasure (1).png" alt="Starting Location5" id="img14" onclick="check(14)">
         </div>
     </div>
     <div class="grid-container">
         <!-- rowww - 4 -->
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location">
+            <img src="treasure (1).png" alt="Starting Location" id="img15" onclick="check(15)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location2">
+            <img src="treasure (1).png" alt="Starting Location2" id="img16" onclick="check(16)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location3">
+            <img src="treasure (1).png" alt="Starting Location3" id="img17" onclick="check(17)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location4">
+            <img src="treasure (1).png" alt="Starting Location4" id="img18" onclick="check(18)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location5">
+            <img src="treasure (1).png" alt="Starting Location5" id="img19" onclick="check(19)">
         </div>
     </div>
     <div class="grid-container">
         <!-- rowww - 5 -->
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location">
+            <img src="treasure (1).png" alt="Starting Location" id="img20" onclick="check(20)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location2">
+            <img src="treasure (1).png" alt="Starting Location2" id="img21" onclick="check(21)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location3">
+            <img src="treasure (1).png" alt="Starting Location3" id="img22" onclick="check(22)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location4">
+            <img src="treasure (1).png" alt="Starting Location4" id="img23" onclick="check(23)">
         </div>
         <div class="grid-item">
-            <img src="treasure (1).png" alt="Starting Location5">
+            <img src="treasure (1).png" alt="Starting Location5" id="img24" onclick="check(24)">
         </div>
     </div>
+
+
+    <script>
+
+        checkCount = 0;
+
+        penalty = 0;
+
+        lastCheck = 0;
+
+        treasureLocation = 5;
+
+        trapLocation = 18,
+
+            ids = ["img0", "img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12", "img13", "img14", "img15", "img16", "img17", "img18", "img19", "img20", "img21", "img22", "img23", "img24"]
+
+        gameOver = false;
+
+        function check(position) {
+            if (gameOver) return;
+            const id = ids[position];
+
+            const image = document.getElementById(id);
+            console.log(image)
+            console.log(id)
+
+
+            if (position == treasureLocation) {
+                image.src = "treasure (2).png";
+                gameOver = true;
+                penalty -= 3;
+            } else if (position == trapLocation) {
+                image.src = "treasure (3).png";
+                gameOver = true;
+                penalty += 4;
+            } else {
+                image.src = "treasure (4).png";
+            }
+            checkCount++;
+            penalty++;
+            document.getElementById("locations").innerHTML = `Locations: ${checkCount}`;
+            document.getElementById("penalty").innerHTML = `Penalty: ${penalty}`;
+            lastCheck = position;
+        }
+
+        document.getElementById("help_id").onclick = help;
+
+        function help() {
+
+            const tresRow = Math.floor(treasureLocation / 5);
+
+            const tresCol = treasureLocation % 5;
+
+            const lrow = Math.floor(lastCheck / 5);
+
+            const lcol = lastCheck % 5;
+
+
+            if (
+
+                Math.abs(tresRow - lrow) + Math.abs(tresCol - lcol) == 1
+
+            ) {
+
+                document.getElementById("help_id").innerText = "Can smell it";
+
+                document.getElementById("help_id").style.color = "red";
+
+            }
+
+            else if (
+
+                Math.abs(tresRow - lrow) + Math.abs(tresCol - lcol) == 2
+
+            ) {
+
+                document.getElementById("help_id").innerText = "Close Matie";
+
+                document.getElementById("help_id").style.color = "orange";
+
+            } else {
+
+                document.getElementById("help_id").innerText = "Step Faster";
+
+                document.getElementById("help_id").style.color = "black";
+
+            }
+
+            penalty += 2;
+
+            document.getElementById("penalty").innerText = `Penalty: ${penalty}`;
+
+            
+        }
+
+
+    </script>
 
 </body>
 
