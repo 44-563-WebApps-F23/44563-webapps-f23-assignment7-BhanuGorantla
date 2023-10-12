@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Merge</title>
 	<style>
@@ -8,7 +9,6 @@
 			display: flex;
 			flex-direction: row;
 			background-color: red;
-
 		}
 
 		.flex-container>div {
@@ -28,13 +28,10 @@
 
 		}
 	</style>
-
 </head>
 
 <body>
-
 	<h2>Bhanu Venkata Siva Kumar Gorantla builds a merger</h2>
-
 	<div class="flex-container" id="target">
 
 		<div>row item 1</div>
@@ -45,12 +42,10 @@
 	<p> Press the button to create an new element of type div and then add it to the container.</p>
 	<input type="text" id="it">
 	<button onclick="makeNewDiv()">Add end</button>
-
-	<button id="addFrontButton">Add Front</button>
-    <button id="removeButton">Remove</button>
-
+	<button onclick="addFront()" id="addFrontButton">Add Front</button>
+	<button onclick="remove()"id="remove">Remove</button>
+	<button onclick="swap()" id="swap">swap</button>
 </body>
-
 <script>
 
 	function makeNewDiv() {
@@ -72,31 +67,45 @@
 	}
 
 	//part8
-    document.getElementById("removeButton").onclick = remove;
+	document.getElementById("removeButton").onclick = remove;
 
-    function remove() {
+	function remove() {
 
-        const mergerItems = document.getElementsByClassName("merger");
-        const length = mergerItems.length;
+		const mergerItems = document.getElementsByClassName("merger");
+		const length = mergerItems.length;
 
-        if (length > 0) {
+		if (length > 0) {
 
-            const middleitem = Math.floor(length / 2);
-            mergerItems[middleitem].remove();
+			const middleitem = Math.floor(length / 2);
+			mergerItems[middleitem].remove();
 
-        }
-    }
+		}
+	}
 
-    document.getElementById("addFrontButton").onclick = addFront;
+	document.getElementById("addFrontButton").onclick = addFront;
 
-    function addFront() {
+	function addFront() {
 
-        const ele = document.createElement("div");
-        ele.className = "merger";
-        const Value = document.getElementById("it").value;
-        ele.innerHTML = Value;
-        const container = document.getElementById("target");
-        container.insertBefore(ele, container.firstChild);
-    }
+		const ele = document.createElement("div");
+		ele.className = "merger";
+		const Value = document.getElementById("it").value;
+		ele.innerHTML = Value;
+		const container = document.getElementById("target");
+		container.insertBefore(ele, container.firstChild);
+	}
+
+
+	//bonus
+
+	function swap() {
+
+		let mergerItems = document.getElementsByClassName("merger");
+		let length = mergerItems.length;
+		let mergerItem = document.getElementsByClassName("merger")[Math.floor(Math.random() * length)];
+		let container = document.getElementById("target");
+		container.insertBefore(mergerItem, container.firstChild);
+
+	}
 </script>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  
+
   <h2>Bhanu Venkata Siva Kumar Gorantla speed check</h2>
   <div id="target">Your time</div>
   <div id="counter">Count</div>
@@ -59,9 +60,21 @@
     }
 
     document.getElementById("startButton").onclick = startTime;
-  
 
-    
+    //bonus 
+    function randomStart() {
+
+      let countdown = Math.floor(Math.random() * 9 + 2);
+      for (let i = 0; i <= countdown; i++) {
+        setTimeout(function () {
+          document.getElementById("counter").innerHTML = "Count: " + i;
+        }, (countdown - i) * 1000);
+
+      }
+
+
+
   </script>
 </body>
+
 </html>
